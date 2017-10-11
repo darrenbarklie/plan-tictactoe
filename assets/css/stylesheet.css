@@ -1,0 +1,6 @@
+/* TODO : Vanilla CSS should be upgraded to SCSS */
+
+.content-container {
+  margin-top: 4rem;
+  border: 1px solid lightgrey;
+}
