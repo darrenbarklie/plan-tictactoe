@@ -2,7 +2,9 @@
     </div><!--container-->
 
     <footer class="fixed-bottom bg-light">
-      <span class="copyright">&copy; 2017 Darren Barklie</span>
+      <div class="container">
+        <span class="copyright">&copy; 2017 Darren Barklie</span>
+      </div><!--container-->
     </footer>
 
     <script type="text/javascript" src="<?php echo base_url("assets/js/jquery-slim.min.js"); ?>"></script>
