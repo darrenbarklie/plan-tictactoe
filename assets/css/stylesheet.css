@@ -13,6 +13,12 @@ body {
 @media (max-width: 576px) {
   body {
     background: rgba(255, 0, 0, 0.2); } }
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 html, body {
   height: 100%; }
   html .app, body .app {
@@ -22,15 +28,25 @@ html, body {
     html .app .page, body .app .page {
       height: 100%;
       background: rgba(255, 0, 0, 0.2);
-      margin: 4rem 0 1.5rem; }
+      margin: 4.5rem 0 2.5rem; }
 
 .page-home section {
   padding-top: 0.5rem;
-  padding-bottom: 2rem; }
+  padding-bottom: 1.5rem; }
 
+.page-play .board {
+  position: relative;
+  height: 100%; }
 .page-play #board {
-  border: 1px solid lightgrey; }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white; }
   .page-play #board .sq {
-    border: 1px solid darkgrey; }
+    border: 1px solid green;
+    display: inline-block;
+    width: 33.333%;
+    height: 33.333%; }
 
 /*# sourceMappingURL=stylesheet.css.map */
