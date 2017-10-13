@@ -1,0 +1,45 @@
+$board-border: 0.25rem solid rgba(black, 0.33);
+
+.sq-1 {
+  border-right: $board-border;
+  border-bottom: $board-border;
+}
+.sq-2 {
+  border-right: $board-border;
+  border-bottom: $board-border;
+  border-left: $board-border;
+}
+.sq-3 {
+  border-bottom: $board-border;
+  border-left: $board-border;
+}
+.sq-4 {
+  border-top: $board-border;
+  border-right: $board-border;
+  border-bottom: $board-border;
+}
+.sq-5 {
+  border-top: $board-border;
+  border-right: $board-border;
+  border-bottom: $board-border;
+  border-left: $board-border;
+}
+.sq-6 {
+  border-top: $board-border;
+  border-bottom: $board-border;
+  border-left: $board-border;
+}
+.sq-7 {
+  border-top: $board-border;
+  border-right: $board-border;
+
+}
+.sq-8 {
+  border-top: $board-border;
+  border-right: $board-border;
+  border-left: $board-border;
+}
+.sq-9 {
+  border-top: $board-border;
+  border-left: $board-border;
+}
