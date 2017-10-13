@@ -1,22 +1,39 @@
-.page {
-  background: rgba(red,0.2);
-  margin-top: 4rem;
-}
 
-.page-home {
-  section {
-    padding-top: 0.5rem;
-    padding-bottom: 1rem;
+@import 'mediaqueries';
+
+// Globals
+html, body {
+  height: 100%;
+  .app {
+    height: 100%;
+    .content-container {
+      height: 100%;
+    }
+    .page {
+      height: 100%;
+      background: rgba(red,0.2);
+      margin: 4rem 0 1.5rem;
+    }
   }
 }
 
-.page-home {
 
+// Page : HOME
+.page-home {
+  section {
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+  }
 }
 
-.board {
-  border: 1px solid lightgrey;
-  .sq {
-    border: 1px solid darkgrey;
+
+// Page : PLAY
+.page-play {
+  // Element : BOARD
+  #board {
+    border: 1px solid lightgrey;
+    .sq {
+      border: 1px solid darkgrey;
+    }
   }
 }
