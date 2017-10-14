@@ -64,10 +64,10 @@ html, body {
           background-color: red;
         }
         &.x {
-          background-color: red;
+          background-color: rgba(red,0.25);
         }
         &.o {
-          background-color: green;
+          background-color: rgba(green,0.25);
         }
       }
     }

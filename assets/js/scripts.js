@@ -42,7 +42,7 @@ $( document ).ready(function() {
   let board = $('#board');
   let square = $('#board .sq span');
   let turn = $('.player-turn');
-  let message = $('.messages');
+  let messages = $('.messages');
   displayTurn(turn, player);
 
 
@@ -64,8 +64,17 @@ $( document ).ready(function() {
         displayTurn(turn, player);
       }
     } else {
-      message.html('This was already selected, select another box.');
+      messages.html('This was already selected, select another box.');
     }
+  });
+
+  // Reset stage
+  $('.reset').click(function() {
+    console.log("Clicked");
+    player = 1;
+    messages.html('');
+    reset(board);
+    displayTurn(turn, player);
   });
 
   // Get the state of clicked square (selected or not)
@@ -108,6 +117,15 @@ $( document ).ready(function() {
   // Check if the player's move matches defined win conditions
   function checkIfPlayerWon(board, symbol){
     var win = 0;
-    
+
   }
-});
+
+  // Reset board
+  function reset(board) {
+    $('.sq > span').each(function(){
+      $(this).removeClass('x').removeClass('o');
+    });
+  }
+
+
+}); // document ready

@@ -6,14 +6,13 @@
   </header>
 
   <!-- Section : Message -->
-  <section class="messages">
-
-  </section><!--message-->
+  <section class="messages"></section>
 
   <!-- Section : Player Turn -->
-  <section class="player-turn">
+  <section class="player-turn"></section>
 
-  </section><!--player-turn-->
+  <!-- Control : Reset -->
+  <input class="reset" type="button" name="reset" value="Reset" />
 
   <!-- Section : Board -->
   <section class="board">
