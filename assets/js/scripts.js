@@ -57,10 +57,31 @@ $( document ).ready(function() {
   $(square).click(function(){
     square = $(this);
     let state = getSqState(square);
+    //console.log(state);
 
-    // Debug
-    console.log(state);
+    // If no state, change state
+    if(!state){
+      let swap = assignPlayer(player);
+      changeState(square, swap);
+    } else {
+      alert("This has been selected, idiot!");
+    }
+
+
+
   });
+
+
+  // changeState
+  function changeState(square, swap) {
+    return square.addClass(swap);
+    console.log(changeState);
+  }
+
+
+
+
+
 
   // getSqState - WORKS
   function getSqState(square){
@@ -70,6 +91,8 @@ $( document ).ready(function() {
       return 0;
     }
   }
+
+
 
 
 
