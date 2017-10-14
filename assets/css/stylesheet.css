@@ -85,7 +85,8 @@ html, body {
   left: 0;
   width: 100%;
   max-width: 400px;
-  background: rgba(255, 255, 255, 0.33); }
+  background: white;
+  background: pink; }
   .page-play #board .sq {
     display: inline-block;
     width: 33.333%;
@@ -98,5 +99,9 @@ html, body {
       align-items: center; }
       .page-play #board .sq span.selected {
         background-color: red; }
+      .page-play #board .sq span.x {
+        background-color: red; }
+      .page-play #board .sq span.o {
+        background-color: green; }
 
 /*# sourceMappingURL=stylesheet.css.map */

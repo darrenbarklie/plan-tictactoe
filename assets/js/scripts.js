@@ -38,81 +38,60 @@ $( document ).ready(function() {
 
 
   // GAME LOGIC
-
-
-
-
-
-
-
-
-
-
-
+  let player = 1;
   let board = $('#board');
   let square = $('#board .sq span');
-  let player = 1;
+  let turn = $('.player-turn');
+  let message = $('.messages');
+  displayTurn(turn, player);
 
-  // selectSquare - PROGRESS
+
+  // Playe select a square
   $(square).click(function(){
     square = $(this);
     let state = getSqState(square);
-    //console.log(state);
 
-    // If no state, change state
+    // If empty square, change square state & check for win
     if(!state){
-      let swap = assignPlayer(player);
-      changeState(square, swap);
+      var symbol = assignPlayerSymbol(player);
+      changeState(square, symbol);
+      // Check if a winning move, otherwise next go
+      if(checkIfPlayerWon(board, symbol)){
+        messsages.htnl('Player '+player+' has won!');
+        turn.html('');
+      } else {
+        player = swapPlayer(player);
+        displayTurn(turn, player);
+      }
     } else {
-      alert("This has been selected, idiot!");
+      message.html('This was already selected, select another box.');
     }
-
-
-
   });
 
-
-  // changeState
-  function changeState(square, swap) {
-    return square.addClass(swap);
-    console.log(changeState);
-  }
-
-
-
-
-
-
-  // getSqState - WORKS
+  // Get the state of clicked square (selected or not)
   function getSqState(square){
-    if(square.hasClass('selected-x') || square.hasClass('selected-o')) {
+    if(square.hasClass('x') || square.hasClass('o')) {
       return 1;
     } else {
       return 0;
     }
   }
 
+  // Change the state by adding the symbol
+  function changeState(square, symbol) {
+    return square.addClass(symbol);
+  }
 
-
-
-
-
-
-
-
-
-
-
-  // assignPlayer
-  function assignPlayer(player){
+  // Assign the player symbol X or O
+  function assignPlayerSymbol(player){
     if(player == 1){
-      return 'selected-x';
+      return 'x';
     } else {
-      return 'selected-o';
+      return 'o';
     }
   }
 
-  // swapPlayer
+  // Swap the players
   function swapPlayer(player){
     if(player == 1){
       return player = 2;
@@ -121,68 +100,14 @@ $( document ).ready(function() {
     }
   }
 
+  // Display the player turn
+  function displayTurn(){
+    turn.html("Player "+player+"'s turn");
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-    //selectSquare
-    // $(square).click(function(){
-    //   if($(this).hasClass('selected')){
-    //     $(this).removeClass('selected');
-    //   } else {
-    //     $(this).addClass('selected');
-    //   }
-    // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // Check if the player's move matches defined win conditions
+  function checkIfPlayerWon(board, symbol){
+    var win = 0;
+    
+  }
 });

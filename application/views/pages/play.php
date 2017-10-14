@@ -5,12 +5,22 @@
     <!-- TODO : Add scores -->
   </header>
 
+  <!-- Section : Message -->
+  <section class="messages">
+
+  </section><!--message-->
+
+  <!-- Section : Player Turn -->
+  <section class="player-turn">
+
+  </section><!--player-turn-->
+
   <!-- Section : Board -->
   <section class="board">
     <div id="board">
       <!-- Note: Commenting for inline gap glitch -->
       <div class="sq sq-1">
-        <span>X</span>
+        <span class="selected-x">X</span>
       </div><!--
 
    --><div class="sq sq-2">
