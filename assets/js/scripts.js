@@ -16,6 +16,15 @@ $( document ).ready(function() {
     };
   };
 
+  // fade out an element from the current state to full transparency in "duration" ms
+  // display is the display style the element is assigned after the animation is done
+  function fadeIn(el, duration, display) {
+      var s = el.style, step = 25/(duration || 300);
+      s.opacity = s.opacity || 0;
+      s.display = display || "block";
+      (function fade() { (s.opacity = parseFloat(s.opacity)+step) > 1 ? s.opacity = 1 : setTimeout(fade, 25); })();
+  }
+
   // Match grid height to grid width
   let applyBoardHeight = debounce(function(){
     let boardWidth = $('#board').outerWidth();
@@ -34,11 +43,11 @@ $( document ).ready(function() {
   let board = $('#board');
   let square = $('#board .sq span');
   let turn = $('.player-turn');
-  let messages = $('.messages');
+  let messages = $('.messages > .message');
   displayTurn(turn, player);
 
 
-  // Playe select a square
+  // Player select a square
   $(square).click(function(){
     square = $(this);
     let state = getSqState(square);
@@ -58,13 +67,13 @@ $( document ).ready(function() {
         displayTurn(player);
       }
     } else {
-      messages.html('This was already selected, select another box.');
+      // messages.html('<span class="msg-warning">This was already selected, select another box.</span>');
+
     }
   });
 
   // Reset stage
   $('.reset').click(function() {
-    console.log("Clicked");
     player = 1;
     messages.html('');
     reset(board);
@@ -112,8 +121,6 @@ $( document ).ready(function() {
       $('.player-turn .player-2').addClass("active");
       $('.player-turn .player-1').removeClass("active");
     }
-
-    //console.log("Player "+player+"'s turn");
   }
 
   // Check if the player's move matches defined win conditions
@@ -162,16 +169,6 @@ $( document ).ready(function() {
     }
     return won;
   }
-
-
-
-
-
-
-
-
-
-
 
   // Reset board
   function reset(board) {

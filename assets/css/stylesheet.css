@@ -25,72 +25,84 @@ html, body {
     height: 100%; }
     html .app .content-container, body .app .content-container {
       height: 100%; }
-    html .app .row, body .app .row {
-      margin: 0; }
     html .app .page, body .app .page {
       height: 100%;
-      background: rgba(255, 0, 0, 0.2);
       margin: 4.5rem 0 2.5rem; }
 
 .page-home section {
   padding-top: 0.5rem;
   padding-bottom: 1.5rem; }
 
-.sq-1 {
+.page-play section.player-turn {
+  padding-left: 0;
+  padding-right: 0; }
+  .page-play section.player-turn .player-name {
+    padding: 1rem; }
+    .page-play section.player-turn .player-name.player-2 {
+      text-align: right; }
+  .page-play section.player-turn .player-1.active {
+    background-color: rgba(255, 0, 0, 0.25); }
+  .page-play section.player-turn .player-2.active {
+    background-color: rgba(0, 0, 255, 0.25); }
+.page-play section.messages .message {
+  background: white;
+  padding: 0.66rem 1rem;
+  min-height: 3rem; }
+  .page-play section.messages .message .msg {
+    border: 1px solid blue;
+    display: block; }
+  .page-play section.messages .message .msg-warning::before {
+    content: "";
+    display: inline-block;
+    float: left;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    background: url("../svg/icon-warning.svg") center center no-repeat; }
+.page-play section.messages .reset-control {
+  background-color: white;
+  display: flex;
+  align-items: stretch;
+  justify-content: center; }
+  .page-play section.messages .reset-control button.reset {
+    width: 100%;
+    color: white;
+    background-color: #d43f3a;
+    border: 0; }
+.page-play .sq-1 {
   border-right: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-bottom: 0.25rem solid rgba(0, 0, 0, 0.33); }
-
-.sq-2 {
+.page-play .sq-2 {
   border-right: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-bottom: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-left: 0.25rem solid rgba(0, 0, 0, 0.33); }
-
-.sq-3 {
+.page-play .sq-3 {
   border-bottom: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-left: 0.25rem solid rgba(0, 0, 0, 0.33); }
-
-.sq-4 {
+.page-play .sq-4 {
   border-top: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-right: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-bottom: 0.25rem solid rgba(0, 0, 0, 0.33); }
-
-.sq-5 {
+.page-play .sq-5 {
   border-top: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-right: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-bottom: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-left: 0.25rem solid rgba(0, 0, 0, 0.33); }
-
-.sq-6 {
+.page-play .sq-6 {
   border-top: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-bottom: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-left: 0.25rem solid rgba(0, 0, 0, 0.33); }
-
-.sq-7 {
+.page-play .sq-7 {
   border-top: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-right: 0.25rem solid rgba(0, 0, 0, 0.33); }
-
-.sq-8 {
+.page-play .sq-8 {
   border-top: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-right: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-left: 0.25rem solid rgba(0, 0, 0, 0.33); }
-
-.sq-9 {
+.page-play .sq-9 {
   border-top: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-left: 0.25rem solid rgba(0, 0, 0, 0.33); }
-
-.page-play .messages {
-  min-height: 2rem;
-  border: 1px solid red; }
-.page-play .board {
-  position: relative; }
-.page-play section.player-turn .player-name {
-  border: 2px solid grey; }
-  .page-play section.player-turn .player-name.active {
-    border: 5px solid red; }
 .page-play #board {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   max-width: 400px;
   background: white;
@@ -111,7 +123,7 @@ html, body {
           content: "X";
           font-size: 40px; }
       .page-play #board .sq span.o {
-        background-color: rgba(0, 128, 0, 0.25); }
+        background-color: rgba(0, 0, 255, 0.25); }
         .page-play #board .sq span.o::after {
           content: "O";
           font-size: 40px; }
