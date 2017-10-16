@@ -15,6 +15,9 @@ html, body {
     .content-container {
       height: 100%;
     }
+    .row {
+      margin: 0;
+    }
     .page {
       height: 100%;
       background: rgba(red,0.2);
@@ -37,10 +40,24 @@ html, body {
 @import 'board';
 
 .page-play {
+  .messages {
+    min-height: 2rem;
+    border: 1px solid red;
+  }
   .board {
     position: relative;
-    height: 100%;
   }
+
+  // Element : PLAYER
+  section.player-turn {
+    .player-name {
+      border: 2px solid grey;
+      &.active {
+        border: 5px solid red;
+      }
+    }
+  }
+
   // Element : BOARD
   #board {
     position: absolute;
@@ -48,8 +65,8 @@ html, body {
     left: 0;
     width: 100%;
     max-width: 400px;
-    background: rgba(white, 1);
-    background: pink;
+    background: white;
+    border: 1rem solid white;
     .sq {
       display: inline-block;
       width: 33.333%;
@@ -62,9 +79,17 @@ html, body {
         align-items: center;
         &.x {
           background-color: rgba(red,0.25);
+          &::after {
+            content: "X";
+            font-size: 40px;
+          }
         }
         &.o {
           background-color: rgba(green,0.25);
+          &::after {
+            content: "O";
+            font-size: 40px;
+          }
         }
       }
     }

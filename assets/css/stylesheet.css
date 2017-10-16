@@ -25,6 +25,8 @@ html, body {
     height: 100%; }
     html .app .content-container, body .app .content-container {
       height: 100%; }
+    html .app .row, body .app .row {
+      margin: 0; }
     html .app .page, body .app .page {
       height: 100%;
       background: rgba(255, 0, 0, 0.2);
@@ -76,9 +78,15 @@ html, body {
   border-top: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-left: 0.25rem solid rgba(0, 0, 0, 0.33); }
 
+.page-play .messages {
+  min-height: 2rem;
+  border: 1px solid red; }
 .page-play .board {
-  position: relative;
-  height: 100%; }
+  position: relative; }
+.page-play section.player-turn .player-name {
+  border: 2px solid grey; }
+  .page-play section.player-turn .player-name.active {
+    border: 5px solid red; }
 .page-play #board {
   position: absolute;
   top: 0;
@@ -86,7 +94,7 @@ html, body {
   width: 100%;
   max-width: 400px;
   background: white;
-  background: pink; }
+  border: 1rem solid white; }
   .page-play #board .sq {
     display: inline-block;
     width: 33.333%;
@@ -99,7 +107,13 @@ html, body {
       align-items: center; }
       .page-play #board .sq span.x {
         background-color: rgba(255, 0, 0, 0.25); }
+        .page-play #board .sq span.x::after {
+          content: "X";
+          font-size: 40px; }
       .page-play #board .sq span.o {
         background-color: rgba(0, 128, 0, 0.25); }
+        .page-play #board .sq span.o::after {
+          content: "O";
+          font-size: 40px; }
 
 /*# sourceMappingURL=stylesheet.css.map */
