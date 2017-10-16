@@ -16,10 +16,10 @@
 
   <!-- Section : Board -->
   <section class="board">
-    <div id="board">
+    <div id="board" class="test">
       <!-- Note: Commenting for inline gap glitch -->
       <div class="sq sq-1">
-        <span class="selected-x">X</span>
+        <span class="test">X</span>
       </div><!--
 
    --><div class="sq sq-2">

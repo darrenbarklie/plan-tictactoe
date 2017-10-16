@@ -57,7 +57,8 @@ $( document ).ready(function() {
       changeState(square, symbol);
       // Check if a winning move, otherwise next go
       if(checkIfPlayerWon(board, symbol)){
-        messsages.htnl('Player '+player+' has won!');
+        console.log("WINRAR!");
+        messages.html('Player '+player+' has won!');
         turn.html('');
       } else {
         player = swapPlayer(player);
@@ -116,9 +117,34 @@ $( document ).ready(function() {
 
   // Check if the player's move matches defined win conditions
   function checkIfPlayerWon(board, symbol){
-    var win = 0;
+    let won = 0;
+    // Row 1 matches 3 symbols
+    if(board.find('.sq-1 > span').hasClass(symbol)
+    && board.find('.sq-2 > span').hasClass(symbol)
+    && board.find('.sq-3 > span').hasClass(symbol)){
+      won = 1;
+    } else {
+      console.log("Nah")
+    }
+    return won;
 
+
+
+
+
+
+    console.log('checkIfPlayerWon', board, symbol, 'Win: ' + won);
   }
+
+
+
+
+
+
+
+
+
+
 
   // Reset board
   function reset(board) {
@@ -126,6 +152,10 @@ $( document ).ready(function() {
       $(this).removeClass('x').removeClass('o');
     });
   }
+
+
+
+
 
 
 }); // document ready

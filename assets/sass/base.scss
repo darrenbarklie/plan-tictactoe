@@ -60,9 +60,6 @@ html, body {
         display: flex;
         justify-content: center;
         align-items: center;
-        &.selected {
-          background-color: red;
-        }
         &.x {
           background-color: rgba(red,0.25);
         }
