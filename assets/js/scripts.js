@@ -16,15 +16,6 @@ $( document ).ready(function() {
     };
   };
 
-  // fade out an element from the current state to full transparency in "duration" ms
-  // display is the display style the element is assigned after the animation is done
-  function fadeIn(el, duration, display) {
-      var s = el.style, step = 25/(duration || 300);
-      s.opacity = s.opacity || 0;
-      s.display = display || "block";
-      (function fade() { (s.opacity = parseFloat(s.opacity)+step) > 1 ? s.opacity = 1 : setTimeout(fade, 25); })();
-  }
-
   // Match grid height to grid width
   let applyBoardHeight = debounce(function(){
     let boardWidth = $('#board').outerWidth();
@@ -39,7 +30,7 @@ $( document ).ready(function() {
 
 
   // GAME LOGIC
-  let player = (Math.random()+1);
+  let player = 1;
   let board = $('#board');
   let square = $('#board .sq span');
   let turn = $('.player-turn');
@@ -60,15 +51,16 @@ $( document ).ready(function() {
       if(checkIfPlayerWon(board, symbol)){
         console.log("WINRAR!");
         messages.html('Player '+player+' has won!');
-        turn.html('');
+        //turn.html('');
       } else {
         player = swapPlayer(player);
         //displayTurn(turn, player);
-        displayTurn(player);
+        console.log("Turn");
+        //displayTurn(player);
       }
     } else {
       // messages.html('<span class="msg-warning">This was already selected, select another box.</span>');
-
+      consoloe.log("Shite");
     }
   });
 

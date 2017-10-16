@@ -38,10 +38,19 @@ html, body {
   $player-1: rgba(red, 0.25);
   $player-2: rgba(blue, 0.25);
 
+  > div {
+    background: white;
+  }
+  header {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #ddd;
+  }
+
   // Element : PLAYER TURN
   section.player-turn {
     padding-left: 0;
     padding-right: 0;
+    background-color: white;
     .player-name {
       padding: 1rem;
       &.player-2 {
@@ -59,16 +68,27 @@ html, body {
 
   // ELement : MESSAGES
   section.messages {
-
+    
     .message {
+      position: relative;
       background: white;
-      padding: 0.66rem 1rem;
+      padding-top: 0.33rem;
       min-height: 3rem;
 
       .msg {
+        position: absolute;
         display: block;
-        border: 1px solid blue;
         padding: 0.25rem;
+        opacity: 0.01;
+        transform: translateY(2.5rem);
+        transition: all 0.77s ease-out;
+
+        &.show {
+          opacity: 1;
+          transform: translateY(0);
+          transition: all 0.22s linear;
+        }
+
         .icon {
           display: inline-block;
           width: 1.5rem;
@@ -110,6 +130,7 @@ html, body {
         display: flex;
         justify-content: center;
         align-items: center;
+        color: white;
         &.x {
           background-color: $player-1;
           &::after {

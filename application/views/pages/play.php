@@ -22,7 +22,7 @@
         <div class="message col-10">
 
           <span class="msg msg-start">
-            <img src="assets/svg/icon-warning.svg" class="icon" alt="Start icon" />
+            <img src="assets/svg/icon-play.svg" class="icon" alt="Start icon" />
             <span>PLAYER to start the game!</span>
           </span>
 
