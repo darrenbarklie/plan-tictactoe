@@ -119,21 +119,53 @@ $( document ).ready(function() {
   function checkIfPlayerWon(board, symbol){
     let won = 0;
     // Row 1 matches 3 symbols
-    if(board.find('.sq-1 > span').hasClass(symbol)
-    && board.find('.sq-2 > span').hasClass(symbol)
-    && board.find('.sq-3 > span').hasClass(symbol)){
-      won = 1;
-    } else {
-      console.log("Nah")
+    if(board.find('.sq-1 > span').hasClass(symbol) &&
+       board.find('.sq-2 > span').hasClass(symbol) &&
+       board.find('.sq-3 > span').hasClass(symbol)){
+         won = 1;
+    } else if // Row 2 matches 3 symbols
+      (board.find('.sq-4 > span').hasClass(symbol) &&
+       board.find('.sq-5 > span').hasClass(symbol) &&
+       board.find('.sq-6 > span').hasClass(symbol)){
+         won = 1;
+    } else if // Row 3 matches 3 symbols
+      (board.find('.sq-7 > span').hasClass(symbol) &&
+       board.find('.sq-8 > span').hasClass(symbol) &&
+       board.find('.sq-9 > span').hasClass(symbol)){
+         console.log('Triggered');
+         won = 1;
+    } else if // Column 1 matches 3 symbols
+      (board.find('.sq-1 > span').hasClass(symbol) &&
+       board.find('.sq-4 > span').hasClass(symbol) &&
+       board.find('.sq-7 > span').hasClass(symbol)){
+         console.log('Triggered');
+         won = 1;
+    } else if // Column 2 matches 3 symbols
+      (board.find('.sq-2 > span').hasClass(symbol) &&
+       board.find('.sq-5 > span').hasClass(symbol) &&
+       board.find('.sq-8 > span').hasClass(symbol)){
+         console.log('Triggered');
+         won = 1;
+    } else if // Column 3 matches 3 symbols
+      (board.find('.sq-3 > span').hasClass(symbol) &&
+       board.find('.sq-6 > span').hasClass(symbol) &&
+       board.find('.sq-9 > span').hasClass(symbol)){
+         console.log('Triggered');
+         won = 1;
+    } else if // Diagonal 1 matches 3 symbols
+      (board.find('.sq-1 > span').hasClass(symbol) &&
+       board.find('.sq-5 > span').hasClass(symbol) &&
+       board.find('.sq-9 > span').hasClass(symbol)){
+         console.log('Triggered');
+         won = 1;
+    } else if // Diagonal 2 matches 3 symbols
+      (board.find('.sq-3 > span').hasClass(symbol) &&
+       board.find('.sq-5 > span').hasClass(symbol) &&
+       board.find('.sq-7 > span').hasClass(symbol)){
+         console.log('Triggered');
+         won = 1;
     }
     return won;
-
-
-
-
-
-
-    console.log('checkIfPlayerWon', board, symbol, 'Win: ' + won);
   }
 
 
