@@ -39,7 +39,7 @@ $( document ).ready(function() {
 
 
   // GAME LOGIC
-  let player = 1;
+  let player = (Math.random()+1);
   let board = $('#board');
   let square = $('#board .sq span');
   let turn = $('.player-turn');

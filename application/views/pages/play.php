@@ -20,8 +20,21 @@
       <!-- Section : Messages -->
       <section class="messages row">
         <div class="message col-10">
-          <span class="msg-warning msg">This was already selected, select another box.</span>
-          <span class="msg-congrats msg">Congratulations, PLAYER is the winner!</span>
+
+          <span class="msg msg-start">
+            <img src="assets/svg/icon-warning.svg" class="icon" alt="Start icon" />
+            <span>PLAYER to start the game!</span>
+          </span>
+
+          <span class="msg msg-warning">
+            <img src="assets/svg/icon-warning.svg" class="icon" alt="Warning icon" />
+            <span>This was already selected, select another box.</span>
+          </span>
+
+          <span class="msg msg-congrats">
+            <img src="assets/svg/icon-trophy.svg" class="icon" alt="Trophy icon" />
+            <span>Congratulations, PLAYER is the winner!</span>
+          </span>
         </div>
 
         <!-- Control : Reset -->
