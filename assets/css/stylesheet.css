@@ -35,12 +35,10 @@ html, body {
 
 .page-play > div {
   background: white; }
-.page-play header {
-  padding-bottom: 3px;
-  border-bottom: 1px solid #ddd; }
 .page-play section.player-turn {
   padding-left: 0;
   padding-right: 0;
+  padding-bottom: 0.25rem;
   background-color: white; }
   .page-play section.player-turn .player-name {
     padding: 1rem; }
@@ -50,37 +48,50 @@ html, body {
     background-color: rgba(255, 0, 0, 0.25); }
   .page-play section.player-turn .player-2.active {
     background-color: rgba(0, 0, 255, 0.25); }
-.page-play section.messages .message {
-  position: relative;
-  background: white;
-  padding-top: 0.33rem;
-  min-height: 3rem; }
-  .page-play section.messages .message .msg {
-    position: absolute;
-    display: block;
-    padding: 0.25rem;
-    opacity: 0.01;
-    transform: translateY(2.5rem);
-    transition: all 0.77s ease-out; }
-    .page-play section.messages .message .msg.show {
-      opacity: 1;
-      transform: translateY(0);
-      transition: all 0.22s linear; }
-    .page-play section.messages .message .msg .icon {
-      display: inline-block;
-      width: 1.5rem;
-      height: 1.5rem;
-      margin-right: 0.25rem; }
-.page-play section.messages .reset-control {
-  background-color: white;
-  display: flex;
-  align-items: stretch;
-  justify-content: center; }
-  .page-play section.messages .reset-control button.reset {
-    width: 100%;
-    color: white;
-    background-color: #d43f3a;
-    border: 0; }
+.page-play section.messages {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd; }
+  .page-play section.messages .message {
+    position: relative;
+    padding-top: 0.5rem;
+    min-height: 3rem; }
+    .page-play section.messages .message .msg {
+      position: absolute;
+      display: block;
+      width: 100%;
+      padding: 0.25rem;
+      opacity: 0.01;
+      transform: translateY(2.5rem);
+      transition: all 0.77s ease-out; }
+      .page-play section.messages .message .msg.show {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.22s linear; }
+      .page-play section.messages .message .msg .icon {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.25rem; }
+    .page-play section.messages .message .msg-start {
+      background-color: rgba(0, 128, 0, 0.2); }
+    .page-play section.messages .message .msg-warning {
+      background-color: rgba(255, 215, 0, 0.1); }
+    .page-play section.messages .message .msg-congrats {
+      background-color: rgba(0, 128, 0, 0.2); }
+    .page-play section.messages .message .msg-hide {
+      display: none; }
+  .page-play section.messages .reset-control {
+    background-color: white;
+    display: flex;
+    align-items: stretch;
+    justify-content: center; }
+    .page-play section.messages .reset-control button.reset {
+      width: 100%;
+      color: white;
+      background-color: #d43f3a;
+      border: 0; }
 .page-play .sq-1 {
   border-right: 0.25rem solid rgba(0, 0, 0, 0.33);
   border-bottom: 0.25rem solid rgba(0, 0, 0, 0.33); }

@@ -37,7 +37,6 @@ $( document ).ready(function() {
   let messages = $('.messages > .message');
   displayTurn(turn, player);
 
-
   // Player select a square
   $(square).click(function(){
     square = $(this);
@@ -50,26 +49,27 @@ $( document ).ready(function() {
       // Check if a winning move, otherwise next go
       if(checkIfPlayerWon(board, symbol)){
         console.log("WINRAR!");
-        messages.html('Player '+player+' has won!');
-        //turn.html('');
+        //messages.html('Player '+player+' has won!');
+
+        playerWins(player);
+
       } else {
         player = swapPlayer(player);
-        //displayTurn(turn, player);
-        console.log("Turn");
-        //displayTurn(player);
+        displayTurn(player);
       }
     } else {
-      // messages.html('<span class="msg-warning">This was already selected, select another box.</span>');
-      consoloe.log("Shite");
+      $(".msg-warning").addClass('show').delay(1000).queue(function(){
+        $(this).removeClass('show').dequeue();
+      });
     }
   });
 
   // Reset stage
   $('.reset').click(function() {
     player = 1;
-    messages.html('');
     reset(board);
     displayTurn(turn, player);
+    displayTurn(player);
   });
 
   // Get the state of clicked square (selected or not)
@@ -162,15 +162,22 @@ $( document ).ready(function() {
     return won;
   }
 
+  // Inform player of win
+  function playerWins(player){
+    winner = $('.winner');
+    winner.html(player);
+    $('.msg-congrats').addClass('show');
+    $('.msg-warning').addClass('msg-hide');
+  }
+
   // Reset board
   function reset(board) {
     $('.sq > span').each(function(){
       $(this).removeClass('x').removeClass('o');
     });
+    $('.msg-congrats').removeClass('show');
+    $('.msg-warning').removeClass('msg-hide');
   }
-
-
-
 
 
 

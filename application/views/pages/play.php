@@ -33,7 +33,7 @@
 
           <span class="msg msg-congrats">
             <img src="assets/svg/icon-trophy.svg" class="icon" alt="Trophy icon" />
-            <span>Congratulations, PLAYER is the winner!</span>
+            <span>Congratulations, Player <span class="winner"></span> is the winner!</span>
           </span>
         </div>
 

@@ -42,14 +42,14 @@ html, body {
     background: white;
   }
   header {
-    padding-bottom: 3px;
-    border-bottom: 1px solid #ddd;
+
   }
 
   // Element : PLAYER TURN
   section.player-turn {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 0.25rem;
     background-color: white;
     .player-name {
       padding: 1rem;
@@ -68,16 +68,18 @@ html, body {
 
   // ELement : MESSAGES
   section.messages {
-    
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     .message {
       position: relative;
-      background: white;
-      padding-top: 0.33rem;
+      padding-top: 0.5rem;
       min-height: 3rem;
-
       .msg {
         position: absolute;
         display: block;
+        width: 100%;
         padding: 0.25rem;
         opacity: 0.01;
         transform: translateY(2.5rem);
@@ -88,13 +90,24 @@ html, body {
           transform: translateY(0);
           transition: all 0.22s linear;
         }
-
         .icon {
           display: inline-block;
           width: 1.5rem;
           height: 1.5rem;
           margin-right: 0.25rem;
         }
+      }
+      .msg-start {
+        background-color: rgba(green, 0.2);
+      }
+      .msg-warning {
+        background-color: rgba(gold, 0.1);
+      }
+      .msg-congrats {
+        background-color: rgba(green, 0.2);
+      }
+      .msg-hide {
+        display: none;
       }
     }
     .reset-control {
