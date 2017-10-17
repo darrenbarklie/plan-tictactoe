@@ -64,6 +64,13 @@ $( document ).ready(function() {
     }
   });
 
+  // Randomize player
+  // function randomPlayer(){
+     let random = (Math.round(Math.random())+1);
+     console.log(random);
+  // }
+
+
   // Reset stage
   $('.reset').click(function() {
     player = 1;

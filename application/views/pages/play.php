@@ -31,6 +31,11 @@
             <span>This was already selected, select another box.</span>
           </span>
 
+          <span class="msg msg-draw">
+            <img src="assets/svg/icon-warning.svg" class="icon" alt="Warning icon" />
+            <span>Game was a tie. Play again?</span>
+          </span>
+
           <span class="msg msg-congrats">
             <img src="assets/svg/icon-trophy.svg" class="icon" alt="Trophy icon" />
             <span>Congratulations, Player <span class="winner"></span> is the winner!</span>
