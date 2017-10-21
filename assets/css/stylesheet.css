@@ -30,6 +30,9 @@ html, body {
       height: 100%;
       margin: 4.5rem 0 2.5rem; }
 
+nav.navbar {
+  opacity: 0.2; }
+
 .page-home section {
   padding-top: 0.5rem;
   padding-bottom: 1.5rem; }

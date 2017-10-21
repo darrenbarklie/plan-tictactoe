@@ -5,10 +5,6 @@
 
       $data['games'] = $this->game_model->get_games();
 
-      print_r($data['games']);
-
-
-
       $this->load->view('templates/header');
       $this->load->view('games/index', $data);
       $this->load->view('templates/footer');
