@@ -24,7 +24,8 @@ html, body {
   html .app, body .app {
     height: 100%; }
     html .app .content-container, body .app .content-container {
-      height: 100%; }
+      height: 100%;
+      padding-top: 4rem; }
     html .app .page, body .app .page {
       height: 100%;
       margin: 4.5rem 0 2.5rem; }
