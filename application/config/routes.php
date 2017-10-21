@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // URL = view
 
 $route['games/create'] = 'games/create';
+$route['games/(:any)'] = 'games/view/$1';
 $route['games'] = 'games/index';
 $route['default_controller'] = 'pages/view';
 $route['(:any)'] = 'pages/view/$1';

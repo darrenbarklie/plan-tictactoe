@@ -1,4 +1,4 @@
-<div class="page page-play">
+<div class="page-play">
 
 
   <div class="col-12 col-md-8 col-lg-6">
@@ -7,7 +7,8 @@
       <section class="player-turn row">
         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
           <div class="player-name player-1">
-            <span>Player 1</span>
+            <!-- <span>Player 1</span> -->
+            
           </div>
         </div>
         <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">

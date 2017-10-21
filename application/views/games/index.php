@@ -1,5 +1,3 @@
-
-
 <section class="previous-results">
   <h2><?= $title ?></h2>
 

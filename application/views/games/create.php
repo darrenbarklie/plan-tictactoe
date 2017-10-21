@@ -1,14 +1,18 @@
 <div class="page page-new-game">
-  
-  <h3><?= $title; ?></h3>
+
+  <h3>Create New Game</h3>
   <p>Insert player names below:</p>
 
   <div class="validation">
     <?php echo validation_errors(); ?>
   </div><!--validation-->
 
+
   <?php echo form_open('games/create'); ?>
     <div class="form-group">
+
+      <input type="text" name="uid" class="" value="<?= $uid; ?>" /> 
+
       <div class="input-player">
         <label for="player-1">Player 1</label>
         <input type="text" name="player-1-name" value="" />
