@@ -30,12 +30,12 @@ html, body {
       height: 100%;
       margin: 4.5rem 0 2.5rem; }
 
-nav.navbar {
-  opacity: 0.2; }
-
 .page-home section {
   padding-top: 0.5rem;
   padding-bottom: 1.5rem; }
+
+.page-new-game .validation {
+  background-color: gold; }
 
 .page-play > div {
   background: white; }
@@ -155,5 +155,19 @@ nav.navbar {
         .page-play #board .sq span.o::after {
           content: "O";
           font-size: 40px; }
+
+section.previous-results {
+  background-color: white;
+  padding: 2rem; }
+  section.previous-results .previous-result {
+    border: 1px solid rgba(0, 0, 0, 0.33);
+    margin-bottom: 1rem; }
+    section.previous-results .previous-result .meta {
+      display: block; }
+    section.previous-results .previous-result .players {
+      display: block; }
+    section.previous-results .previous-result .winner {
+      display: block;
+      background: gold; }
 
 /*# sourceMappingURL=stylesheet.css.map */

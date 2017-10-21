@@ -1,23 +1,29 @@
-<h2><?= $title ?></h2>
 
-<?php foreach($games as $game) : ?>
 
-  <div class="game-result">
+<section class="previous-results">
+  <h2><?= $title ?></h2>
 
-    <small><?php echo $game['id']; ?></small>
+  <?php foreach($games as $game) : ?>
 
-    <h3><?php echo $game['player1_name']; ?></h3>
+    <div class="previous-result">
 
-    <small>verses</small>
+      <div class="meta">
+        <small>Game ID: <?php echo $game['id']; ?> played on <?php echo $game['created_at']; ?></small>
+      </div><!--meta-->
 
-    <h3><?php echo $game['player2_name']; ?></h3>
+      <div class="players">
+        <span class="player"><?php echo $game['player1_name']; ?></span>
+        <small>verses</small>
+        <span class="player"><?php echo $game['player2_name']; ?></span>
+      </div><!--players-->
 
-    <br>
+      <div class="winner">
+        <small>Winner:</small>
+        <span class="player"><?php echo $game['game_win_player']; ?></span>
+      </div><!--winner-->
 
-    <small>Winner:</small>
+    </div><!--previous-result-->
 
-    <h3><?php echo $game['game_win_player']; ?></h3>
+  <?php endforeach; ?>
 
-  </div>
-
-<?php endforeach; ?>
+</section><!--previous-results-->

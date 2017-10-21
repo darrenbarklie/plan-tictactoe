@@ -17,24 +17,9 @@
     </ol>
   </section><!--rules-->
 
-  <!-- Section : Collect Names -->
-  <section class="collect-names">
-    <h3>Insert Names</h3>
-    <p>Insert player names below:</p>
-
-    <div class="input-player">
-      <label for="player-1">Player 1</label>
-      <input type="text" name="player-1" value="" />
-    </div>
-
-    <div class="input-player">
-      <label for="player-2">Player 2</label>
-      <input type="text" name="player-2" value="" />
-    </div>
-
-    <div class="input-player">
-      <button type="submit" name="submit" class="btn btn-primary">Play</button>
-    </div>
-  </section><!--collect-names-->
+  <!-- Section : Start -->
+  <section class="start">
+    <a href="<?php echo base_url("games/create"); ?>">Get Started</a>
+  </section><!-- start -->
 
 </div><!--page-home-->

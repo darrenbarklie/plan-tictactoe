@@ -24,11 +24,6 @@ html, body {
 }
 
 
-// Element : NAVBAR
-nav.navbar {
-  opacity: 0.2;
-}
-
 // Page : HOME
 .page-home {
   section {
@@ -36,6 +31,26 @@ nav.navbar {
     padding-bottom: 1.5rem;
   }
 }
+
+
+
+
+
+// Page : NEW GAME
+.page-new-game {
+  .validation {
+    background-color: gold;
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 // Page : PLAY
@@ -169,6 +184,26 @@ nav.navbar {
   }
 }
 
+
+// Element : PREVIOUS RESULTS
+section.previous-results {
+  background-color: white;
+  padding: 2rem;
+  .previous-result {
+    border: 1px solid rgba(black, 0.33);
+    margin-bottom: 1rem;
+    .meta {
+      display: block;
+    }
+    .players {
+      display: block;
+    }
+    .winner {
+      display: block;
+      background: gold;
+    }
+  }
+}
 
 
 
